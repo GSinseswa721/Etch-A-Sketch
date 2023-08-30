@@ -1,0 +1,119 @@
+body {
+    background-color: rgb(174, 226, 226);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+.root {
+    --content-width:400px;
+}
+
+.mouse-o-sketch {
+    font-family: cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 30px;
+    color: gold;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: calc(75vw + 40px);
+    max-width: calc(var(--content-width) + 40px);
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+ 
+.buttons > * {
+    flex: 1 1 auto;
+}
+button {
+    font-family: cursive;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px;
+    color:gold;
+    line-height: 27px;
+    background-color:#e06;
+    border: 1px solid white;
+}
+ button:focus, input:focus {
+    outline: none ;
+    box-shadow: 0 1px 10px 0 rgba(240, 240, 240, 1);
+ }
+ .grid-options {
+    width: calc(74vm + 40 px);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    align-items: center;
+    max-width: calc(var(--content-width) + 40px);
+ }
+ .grid-options > * {
+    flex: 1 1 auto;
+ }
+ .size-container {
+    width: 30vw;
+    padding-left: 10px;
+    margin-right: 5px;
+ }
+ .size-container p {
+  color:#e06;
+  font-size: 20px;
+  font-family: cursive;
+  margin: 10px 0;
+ }
+
+ .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    background: gold;
+    outline: none;
+    transform:  rotate(180deg);
+    transition: 0.5s;
+    border-radius: 10px;
+ }
+ .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: #e06;
+    border-radius: 60%;
+    cursor: pointer;
+ }
+@media only screen and (min-width: 1500px) {
+    :root {
+        --content-width: 500px;
+    }
+}
+.container {
+    display:  grid;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+}
+.container-wrapper {
+    height: 30vw;
+    width: 40vw;
+    max-height: var(--content-width);;
+    max-width: var(--content-width);
+    margin: 30px auto;
+    position: relative;
+}
+
+.container-wrapper:before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    bottom: -15px;
+    right: -15px;
+    left: -15px;
+    background-color: #ffffff;
+    z-index: -1;
+}

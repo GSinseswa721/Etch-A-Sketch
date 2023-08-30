@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Etch-A-Sketch</title>
+</head>
+<body>
+    <h1 class="mouse-o-sketch">Mouse-A-Sketch</h1>
+    <div class="buttons">
+        <button class="choose-color" data-color="gray" type="button">Gray</button>
+        <button class="choose-color" data-color="black" type="button">Black</button>
+        <button class="choose-color" data-color="rainbow" type="button">Rainbow</button>
+        <button class="choose-color" >Pick: <input type="color" value="#f89880" id="input-color"></button>
+        <button class="choose-color" data-color="eraser" type="button">Eraser</button>
+    </div>
+    <div class="container-wrapper">
+        <div class="container">
+        </div>
+    </div>
+    <div class="grid-options">
+        <button class="clear" type="button">Clear</button>
+        <div class="size-container">
+            <p>Pixel Size</p>
+            <input type="range" min="4" max="100" value="15" id="sizeRange" class="slider">
+            <p>Smallest to Largest</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
